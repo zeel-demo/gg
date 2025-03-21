@@ -8,3 +8,11 @@ def run_patch():
 	x = 1 / 0
 
 	print("Patching frappe_appointment")
+
+
+import frappe
+
+
+@frappe.whitelist(allow_guest=True)
+def api():
+	return "Hum Broke hai"
